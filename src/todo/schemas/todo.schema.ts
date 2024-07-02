@@ -21,7 +21,7 @@ export class Todo {
     id: number;
 
     @Prop()
-    value : number;
+    value : string;
 
     @Prop()
     done: boolean;

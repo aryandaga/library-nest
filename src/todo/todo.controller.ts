@@ -2,7 +2,7 @@ import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { TodoService } from './todo.service';
 import { Todo } from './schemas/todo.schema';
 import { CreateTodoDTO } from './dto/create-todo.dto';
-import { UpdateTodoDTO } from './dto/update-todo.dto';
+// import { UpdateTodoDTO } from './dto/update-todo.dto';
 import { todo } from 'node:test';
 
 @Controller('todos')
@@ -35,7 +35,7 @@ export class TodoController {
         @Param('id')
         id: number,
         @Body()
-        todo: UpdateTodoDTO,
+        todo: CreateTodoDTO,
     ): Promise<Todo> {
         return this.todoService.upadateById(id, todo)
     }
